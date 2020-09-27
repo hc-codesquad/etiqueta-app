@@ -2,21 +2,21 @@ const request = require('request');
 
 const options = {
   method: 'GET',
-  url: 'https://hiringcoders13.vtexcommercestable.com.br/api/oms/pvt/orders/1064411059373-01',
+  url: 'https://hiringcoders13.vtexcommercestable.com.br/api/oms/pvt/orders/[numero do pedido]',
   headers: {
     accept: 'application/json',
     'content-type': 'application/json',
-    'x-vtex-api-appkey': 'vtexappkey-hiringcoders13-FCQFKD',
-    'x-vtex-api-apptoken': 'SLLNRWDRPRHLMPRJZFLFOGNGLFNQUNKYAIZHMEXHUZOUFGGBOZZZRFBLYFBLINXBHJKEQJWUIEKPSSAFZMBVNLGUGNIHCLYHCMNWVCLECEQNVMTFFVMWLBOWDQXCAPSX',
-    janus_sid: 'bd3054ee-7b2f-438f-8da4-039c8f1550d0'
+    'x-vtex-api-appkey': '[APP Key da VTEX]',
+    'x-vtex-api-apptoken': '[APP Token VTEX]',
+    janus_sid: '[ID de sessão]'
   }
 };
 
 const settings = {
-    client_id: '822',
-    client_secret: 'QHkKIHtxnbq70ruH1P7bnk6OyBnzDKYIM5kQahhn',
+    client_id: '[ID no melhor envio]',
+    client_secret: '[Token do Melhor Envio]',
     sandbox: true,
-    bearer: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjE3MTFkZGQwNDc0MzZlN2Q0MzE2MGQ1YzlhYzBlYmQwNDVlMmQ2NDQ3ODliZmMyOGNlOGYwOTg0NjE5OTQzNTMwMmE1N2ViNmUyY2IyYTkwIn0.eyJhdWQiOiIxIiwianRpIjoiMTcxMWRkZDA0NzQzNmU3ZDQzMTYwZDVjOWFjMGViZDA0NWUyZDY0NDc4OWJmYzI4Y2U4ZjA5ODQ2MTk5NDM1MzAyYTU3ZWI2ZTJjYjJhOTAiLCJpYXQiOjE2MDA4MDU2NTUsIm5iZiI6MTYwMDgwNTY1NSwiZXhwIjoxNjMyMzQxNjU1LCJzdWIiOiJhNzdmMTEyMy0yMDI2LTRjODItYTIzOC03MDNiYzAzYmEyODgiLCJzY29wZXMiOlsiY2FydC1yZWFkIiwiY2FydC13cml0ZSIsImNvbXBhbmllcy1yZWFkIiwiY29tcGFuaWVzLXdyaXRlIiwiY291cG9ucy1yZWFkIiwiY291cG9ucy13cml0ZSIsIm5vdGlmaWNhdGlvbnMtcmVhZCIsIm9yZGVycy1yZWFkIiwicHJvZHVjdHMtcmVhZCIsInByb2R1Y3RzLXdyaXRlIiwicHVyY2hhc2VzLXJlYWQiLCJzaGlwcGluZy1jYWxjdWxhdGUiLCJzaGlwcGluZy1jYW5jZWwiLCJzaGlwcGluZy1jaGVja291dCIsInNoaXBwaW5nLWNvbXBhbmllcyIsInNoaXBwaW5nLWdlbmVyYXRlIiwic2hpcHBpbmctcHJldmlldyIsInNoaXBwaW5nLXByaW50Iiwic2hpcHBpbmctc2hhcmUiLCJzaGlwcGluZy10cmFja2luZyIsImVjb21tZXJjZS1zaGlwcGluZyIsInRyYW5zYWN0aW9ucy1yZWFkIiwidXNlcnMtcmVhZCIsInVzZXJzLXdyaXRlIiwid2ViaG9va3MtcmVhZCIsIndlYmhvb2tzLXdyaXRlIl19.FmYkdTMx-zEN3mOWrvFnrjsGLJ6IDIAicnPuAWsgz6QbC8F4YvWMUfoFPkbyD9W29h_Mt_IJ4jpZeXRUdSif3uXsMXZ4jiBrngIMQIRKaqp_zUy-wtF084SMtbO1zcqIrB8HGzNFtZBR2CXNvfjbUMSeyVOASB_DpL2Je3goJcFa7EH7V8oJWylLI5oqF9IldymEbIwlONhIBVYfrH-4XdXbiLHB5MbcCFfq4qNhMtnOScQDkRltY14VmmyvXf4507CBBK-PMEGorF1JF5ZPekZrA0mpauzflodbrbHSXs3H13eQFKh9uGDJfyogCZRoc73lN7yW7nCXFoOslup_ntWUPFngM67yAQy0XKJs3qgMMl8RcdpRewMldDEARI6tt45q3rr5H9xEswGGUDSLkOGVwrLYeG16-KXZmx60hMb6znnqMIXqvkigS31_DURusW8deoQDleiFMeRrjbe_PU6H-qKw58zBB-ZpP6o6CceW7n2i0WqUSk6wzrFlXvgcyda6IW5Y6eYSrQFSkMsv5dJEF9YP9wKdc6b39LLg00mj-XMCScjguxYTeLGaS68kGNS5HEE3YuWn0MeORJVqM6dnO06kXrPF5dXY9HJzgpjkdVYtZwIOvq-ZMIyPQLlZgg5cfB8ql08o1_14TwHSiqOfnGqk59-FBIbErBuwEvQ',
+    bearer: '[Token no Melhor Envio, esse gerado no  painel]',
     redirect_uri: 'https://hiringcoders13.myvtex.com',
     request_scope: 'cart-read cart-write companies-read companies-write coupons-read coupons-write notifications-read orders-read products-read products-write purchases-read shipping-calculate shipping-cancel shipping-checkout shipping-companies shipping-generate shipping-preview shipping-print shipping-share shipping-tracking ecommerce-shipping transactions-read users-read users-write webhooks-read webhooks-write',
     state: ''
@@ -33,19 +33,19 @@ request(options, async function(error, response, body) {
     const payload = {
         "service": 2, // 1 = pac, 2 = sedex. Como só vou usar os correios , fica assim
         "from": { // Dados da loja
-            "name": "Codesquad",
-            "phone": "61981839384",
-            "email": "contato@codesquad.com.br",
-            "document": "16571478358", 
-            "address": "SQN 408 Bloco O",
+            "name": "",
+            "phone": "",
+            "email": "",
+            "document": "", 
+            "address": "",
             "complement": "",
-            "number": "102",
-            "district": "Asa Norte",
-            "city": "Brasília",
-            "state_abbr": "DF",
-            "country_id": "BR",
-            "postal_code": "70856-150",
-            "note": "observação"
+            "number": "",
+            "district": "",
+            "city": "",
+            "state_abbr": "",
+            "country_id": "",
+            "postal_code": "",
+            "note": ""
         },
         "to": { // Dados do destinatário, aka. cliente
             "name": pedido_vtex.clientProfileData.firstName + " " + pedido_vtex.clientProfileData.lastName,
@@ -91,7 +91,7 @@ request(options, async function(error, response, body) {
             "reverse": false, // Se é logística reversa, ou seja, devolução
             "non_commercial": true, // Deixe true por enquanto
             "invoice": { // Nota fiscal, obrigatória se a transportadora não for os Correios
-                "key": "31190307586261000184550010000092481404848162"
+                "key": "[nota fiscal]"
             },
             "platform": "VTEX",
             "tags": [
